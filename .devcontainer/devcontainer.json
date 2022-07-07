@@ -1,0 +1,19 @@
+{
+  "name": "my go app",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "go.toolsManagement.checkForUpdates": "local",
+        "go.useLanguageServer": true,
+        "go.gopath": "/go"
+      },
+      "extensions": ["golang.Go"]
+    }
+  },
+  "forwardPorts": [1323],
+  "postCreateCommand": "go version",
+  "remoteUser": "vscode"
+}
